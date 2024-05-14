@@ -1,0 +1,223 @@
+*,
+*::after,
+*::before{
+padding: 0%;
+box-sizing: border-box;
+margin: 0%;
+font-family: 'League Spartan',sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    /* border: 2px solid red ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(45deg,rgb(88, 27, 125,1) 0%,rgb(52, 28, 79,1) 50%,rgb(22, 6, 40,1) 100%  );
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+h1{
+    color: rgb(204, 198, 211);
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: 1.8px;
+}
+.display-container{
+    background-color: rgb(22, 5, 40);
+    position: relative;
+    border-radius: 1rem;
+    border-bottom: .35rem solid rgb(88, 7, 125);
+    margin: 1rem 0;
+}
+.display{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: rgb(255, 229, 61);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    transform: translateY(4%);
+}
+.display::placeholder{
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    line-height: 30px;
+    color: rgb(255, 229, 61);
+    text-transform: uppercase;
+    opacity: .65;
+
+}
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+/* here we go input contaner  */
+
+.input-container{
+    
+    width: 100%;
+    padding: 1.5rem ;
+    background-color: rgb(22, 5, 40);
+    border-radius: 1rem;
+    color: white;
+    border-bottom: .35rem solid rgb(88, 7, 125);
+}
+ /* here we for password lengt part  */
+.password-lenght{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-lenght p:nth-child(1){
+    font-size: 1.3rem;
+}
+.password-lenght p:nth-child(2){
+    color: rgb(255, 229, 61);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+ /* here we for strenght part  */
+.strenght-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+.indicator{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 20px;
+
+}
+.generateButton{
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    background-color: rgb(188, 21, 244);
+    text-align: center;
+    border-radius: .75rem;
+    border-bottom: .35rem solid rgb(255, 229, 61);
+    color: rgb(255, 229, 61);
+    font-size: 1.25rem;
+    font-weight: 600;
+    
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0 1rem ;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    cursor: pointer;
+    height: 20px;
+    border: 1px solid cyan;
+    border-radius: .35rem;
+    position: relative;
+}
+.check input:checked{
+    background-color: cyan;
+}
+
+.check input:checked::before {
+    content: '✔';
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+    transform: translateY(-50%) translateX(-50%);
+}
+.check label{
+    font-size: 1.25rem;
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background-color:rgb(188, 27, 241) ;
+    border-radius: 15px;
+    font-size: 10px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.3rem;
+    background-image: linear-gradient(rgb(187, 19, 244),rgb(187, 19, 244));
+    background-repeat: no-repeat;
+    border: none ;
+    outline: none;
+    z-index: -1;
+    
+}
+ /* this is for firefox */
+    .slider::-moz-range-thumb {
+        position: relative;
+        
+        z-index: 1;
+        appearance: none;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background: rgb(255, 229, 61);
+        cursor: pointer;
+        /* margin-top: -3px; */
+        box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.5); 
+        /* transition: all 100ms ease-in; */
+        /* outline: none; */
+        
+        }
+    
+    /* this is for chrome */
+   /* .slider:focus{
+    outline: 1px solid yellow;
+    
+   } */
+   
+    .slider::-moz-range-thumb:hover{
+        position: relative;
+        outline: 3px solid rgb(255, 229, 61);
+        background: rgb(22, 5, 40);
+        box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.5);
+       
+    }
+    .copyBtn{
+        background: transparent;
+        outline: none ;
+        border: none;
+    }
+    .toolTip{
+        position: absolute;
+        background-color: rgb(188, 27, 241);
+        color: rgb(255, 229, 61);
+        font-size: 1.25rem;
+        top: -35px;
+        left: -24px;
+        padding: 5px 10px;
+        border-radius: 1rem;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom;
+        transition: all 250ms ease-in-out;
+    }
+    .toolTip.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    
