@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(45deg,rgb(88, 27, 125,1) 0%,rgb(52, 28, 79,1) 50%,rgb(22, 6, 40,1) 100%  );
+    background: linear-gradient(45deg,rgb(85, 121, 199) 0%,rgb(37, 62, 86) 50%,rgb(26, 38, 67) 100%  );
 }
 .container{
     width: 90%;
@@ -32,7 +32,7 @@ h1{
     background-color: rgb(22, 5, 40);
     position: relative;
     border-radius: 1rem;
-    border-bottom: .35rem solid rgb(88, 7, 125);
+    border-bottom: .35rem solid rgb(7, 60, 125);
     margin: 1rem 0;
 }
 .display{
@@ -72,10 +72,10 @@ h1{
     
     width: 100%;
     padding: 1.5rem ;
-    background-color: rgb(22, 5, 40);
+    background-color: rgb(10, 5, 40);
     border-radius: 1rem;
     color: white;
-    border-bottom: .35rem solid rgb(88, 7, 125);
+    border-bottom: .35rem solid rgb(7, 58, 125);
 }
  /* here we for password lengt part  */
 .password-lenght{
